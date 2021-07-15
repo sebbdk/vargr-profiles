@@ -23,9 +23,9 @@ alias gco='git checkout $*'
 alias gls='git log --oneline'
 alias gbr='git branch --sort=-committerdate | head -n 10'
 
-if [ -f "./.bash_profile_additional" ];
+if [ -f "./.bash_profile_env" ];
 then
-	. "./.bash_profile_additional"
-	echo "Loaded additional profile!"
+	. "./.bash_profile_env"
+	echo "Loaded environment profile!"
 	echo '---------------------------------'
 fi
