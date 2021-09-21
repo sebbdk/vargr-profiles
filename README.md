@@ -1,5 +1,5 @@
 # vargr-profiles
-My generic cmder & bash profile shortcuts
+My generic cmder & .bash_profile shortcuts
 
 Missing stories:
  - As a user, i should be able to see if there is an update version when i start a new terminal
