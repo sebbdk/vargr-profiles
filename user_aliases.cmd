@@ -9,7 +9,6 @@ gl=git log --oneline --all --graph --decorate  $*
 ls=ls --show-control-chars -F --color $*
 pwd=cd
 clear=cls
-history=cat "%CMDER_ROOT%\config\.history"
 unalias=alias /d $1
 vi=vim $*
 cmderr=cd /d "%CMDER_ROOT%"
@@ -18,3 +17,6 @@ gct=cls & git status $*
 gco=git checkout $*
 gls=git log --oneline
 gbr=git branch --sort=-committerdate | head -n 10
+dev=cd %HOMEPATH%/dev
+pro=cd %HOMEPATH%/dev/projects
+note=code %HOMEPATH%/dev/notes
