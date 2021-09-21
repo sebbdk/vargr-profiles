@@ -26,4 +26,9 @@ echo gst - git status alias
 echo gct - clear screen + git status
 echo gco - git checkout alias
 echo gbr - Show last 10 banches used
+echo gbr - Show last 10 banches used
+echo.
+echo dev - goes to dev folder
+echo pro - goes to dev/projects folder
+echo note - opens dev/notes in vscode
 echo ---------------------------------
