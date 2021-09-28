@@ -19,4 +19,4 @@ gls=git log --oneline
 gbr=git branch --sort=-committerdate | head -n 10
 dev=cd %HOMEPATH%/dev
 pro=cd %HOMEPATH%/dev/projects
-note=code %HOMEPATH%/dev/notes
+note=code %HOMEPATH%/dev/logs
