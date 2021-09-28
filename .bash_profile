@@ -14,7 +14,7 @@ alias ls='ls -la --show-control-chars -F --color $*'
 # Folder shortcuts
 alias dev='cd ~/dev'
 alias pro='cd ~/dev/projects'
-alias note='code ~/dev/notes'
+alias note='code ~/dev/logs'
 
 # Windows specific
 alias e.='explorer .'
