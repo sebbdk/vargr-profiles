@@ -19,6 +19,8 @@
 :: @echo off
 set NODE_OPTIONS=--max-old-space-size=8192
 
+cd %HOMEPATH%
+
 echo Hello Seb, here's your shortcuts:
 echo ---------------------------------
 echo gls - git long single lines
