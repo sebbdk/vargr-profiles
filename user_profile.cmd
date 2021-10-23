@@ -21,14 +21,13 @@ set NODE_OPTIONS=--max-old-space-size=8192
 
 cd %HOMEPATH%
 
-echo Hello Seb, here's your shortcuts:
+echo Hello %username%, here's your shortcuts:
 echo ---------------------------------
 echo gls - git long single lines
 echo gst - git status alias
 echo gct - clear screen + git status
 echo gco - git checkout alias
-echo gbr - Show last 10 banches used
-echo gbr - Show last 10 banches used
+echo gbr - Show last 10 branches used
 echo.
 echo dev - goes to dev folder
 echo pro - goes to dev/projects folder
