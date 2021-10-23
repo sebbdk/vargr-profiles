@@ -9,6 +9,7 @@ Missing stories:
  5) [M] As a user, i would like to see a if i have changes not commited of pushed in my projects folder on startup
 
 **Tag descriptions**
-[L] - Large story
-[M] - Medium story
-[S] - Small story
+
+- [L] -> Large story
+- [M] -> Medium story
+- [S] -> Small story
