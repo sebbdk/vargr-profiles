@@ -27,7 +27,9 @@ alias gco='git checkout $*'
 alias gls='git log --oneline'
 alias gbr='git branch --sort=-committerdate | head -n 10'
 
-echo "Hello Seb, here's your shortcuts:"
+cd ~
+
+echo "Hello $(whoami), here's your shortcuts:"
 echo '---------------------------------'
 echo 'gls - git long single lines'
 echo 'gst - git status alias'
@@ -39,6 +41,7 @@ echo 'dev - goes to dev folder'
 echo 'pro - goes to dev/projects folder'
 echo 'note - opens dev/notes in vscode'
 echo '---------------------------------'
+echo
 
 if [ -f "./.bash_profile_env" ];
 then
