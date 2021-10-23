@@ -8,6 +8,9 @@ My generic cmder & .bash_profile configurations
  4) [M] As a user, i should be able to see if there is an update version when i start a new terminal
  5) [M] As a user, i would like to see a if i have changes not commited of pushed in my projects folder on startup
 
+**Nice to have script stories**
+ - [L] As a user, i would like to run a script that takes a password and remote path and sets up a SSH key on a remote
+
 **Tag descriptions:**
 
 - [L] -> Large story
