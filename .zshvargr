@@ -1,0 +1,41 @@
+# Simply include this file where-ever needed like so:
+# source ~/.zshvargr
+
+# Important
+# Remember to add it in the personal alias section of the .zshrc file
+# if using oh-my-zsh to avoid alias conflicts.
+
+# Folder shortcuts
+alias dev='cd ~/dev'
+alias pro='cd ~/dev/projects'
+alias dtu='cd ~/dev/projects'
+
+# Misc shortcuts
+alias note='code ~/dev/logs' # opens my logs in vscode
+
+# Git related shortcuts
+alias gl='git log --oneline --all --graph --decorate  $*'
+alias gst='git status $*q'
+alias gct='clear & git status $*'
+alias gco='git checkout $*'
+alias gls='git log --oneline'
+alias gbr='git branch --sort=-committerdate | head -n 10'
+alias party='curl http://parrot.live'
+
+echo
+echo "Hello $(whoami), here are your shortcuts:"
+echo '---------------------------------'
+echo 'gls - git long single lines'
+echo 'gst - git status alias'
+echo 'gct - clear screen + git status'
+echo 'gco - git checkout alias'
+echo 'gbr - Show last 10 banches used'
+echo
+echo 'dev - goes to dev folder'
+echo 'pro - goes to dev/projects folder'
+echo 'dtu - goes to dev/dtu folder'
+echo 'note - opens dev/notes in vscode'
+echo '---------------------------------'
+echo
+
+dev
