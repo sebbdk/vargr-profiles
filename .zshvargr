@@ -5,6 +5,15 @@
 # Remember to add it in the personal alias section of the .zshrc file
 # if using oh-my-zsh to avoid alias conflicts.
 
+gitCleadLS()
+{
+    clear
+
+    if git status &>/dev/null; then
+        git status $*
+    fi
+}
+
 # Folder shortcuts
 alias dev='cd ~/dev'
 alias pro='cd ~/dev/projects'
@@ -15,7 +24,7 @@ alias note='code ~/dev/logs' # opens my logs in vscode
 
 # Git related shortcuts
 alias gl='git log --oneline --all --graph --decorate  $*'
-alias gst='git status $*q'
+alias gst=gitCleadLS
 alias gct='clear & git status $*'
 alias gco='git checkout $*'
 alias gls='git log --oneline'
