@@ -13,7 +13,7 @@ alias ls='ls -la --show-control-chars -F --color $*'
 
 # Folder shortcuts
 alias dev='cd ~/dev'
-alias pro='cd ~/dev/projects'
+alias pro='cd ~/dev/pro'
 alias note='code ~/dev/logs'
 
 # Windows specific
@@ -38,7 +38,7 @@ echo 'gco - git checkout alias'
 echo 'gbr - Show last 10 banches used'
 echo
 echo 'dev - goes to dev folder'
-echo 'pro - goes to dev/projects folder'
+echo 'pro - goes to dev/pro folder'
 echo 'note - opens dev/notes in vscode'
 echo '---------------------------------'
 echo
