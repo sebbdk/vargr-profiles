@@ -5,6 +5,9 @@
 # Remember to add it in the personal alias section of the .zshrc file
 # if using oh-my-zsh to avoid alias conflicts.
 
+# Recommended plugins for .zshrc:
+# plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf docker npm node z copypath)
+
 gitCleadLS()
 {
     clear
@@ -14,10 +17,26 @@ gitCleadLS()
     fi
 }
 
+hint() {
+    echo
+    echo "Hello $(whoami), here are your shortcuts:"
+    echo '---------------------------------'
+    echo 'gls - git long single lines'
+    echo 'gst - git status alias'
+    echo 'gct - clear screen + git status'
+    echo 'gco - git checkout alias'
+    echo 'gbr - Show last 10 banches used'
+    echo
+    echo 'dev - goes to dev folder'
+    echo 'pro - goes to dev/projects folder'
+    echo 'note - opens dev/notes in vscode'
+    echo '---------------------------------'
+    echo
+}
+
 # Folder shortcuts
 alias dev='cd ~/dev'
-alias pro='cd ~/dev/projects'
-alias dtu='cd ~/dev/projects'
+alias pro='cd ~/dev/pro'
 
 # Misc shortcuts
 alias note='code ~/dev/logs' # opens my logs in vscode
@@ -31,20 +50,6 @@ alias gls='git log --oneline'
 alias gbr='git branch --sort=-committerdate | head -n 10'
 alias party='curl http://parrot.live'
 
-echo
-echo "Hello $(whoami), here are your shortcuts:"
-echo '---------------------------------'
-echo 'gls - git long single lines'
-echo 'gst - git status alias'
-echo 'gct - clear screen + git status'
-echo 'gco - git checkout alias'
-echo 'gbr - Show last 10 banches used'
-echo
-echo 'dev - goes to dev folder'
-echo 'pro - goes to dev/projects folder'
-echo 'dtu - goes to dev/dtu folder'
-echo 'note - opens dev/notes in vscode'
-echo '---------------------------------'
-echo
+hint
 
 dev
