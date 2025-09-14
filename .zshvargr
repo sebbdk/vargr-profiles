@@ -26,6 +26,8 @@ hint() {
     echo 'gct - clear screen + git status'
     echo 'gco - git checkout alias'
     echo 'gbr - Show last 10 banches used'
+    echo 
+    echo 'ssh-copy-id user@host to setup keys on remote hosts'
     echo
     echo 'dev - goes to dev folder'
     echo 'pro - goes to dev/projects folder'
