@@ -28,6 +28,7 @@ hint() {
     echo 'gbr - Show last 10 banches used'
     echo 
     echo 'ssh-copy-id user@host to setup keys on remote hosts'
+    echo 'fzf use it for fuzzy finding files'
     echo
     echo 'dev - goes to dev folder'
     echo 'pro - goes to dev/projects folder'
