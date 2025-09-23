@@ -50,7 +50,7 @@ fi
 install_plugin() {
     local plugin_name=$1
     local plugin_path="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/$plugin_name"
-    
+
     case $plugin_name in
         "zsh-autosuggestions")
             if [ ! -d "$plugin_path" ]; then
@@ -78,6 +78,41 @@ install_plugin() {
             fi
             ;;
     esac
+}
+
+# Function to setup tmux configuration
+setup_tmux() {
+    local tmux_conf="$HOME/.tmux.conf"
+
+    echo "Setting up tmux configuration..."
+
+    # Create tmux config if it doesn't exist
+    if [ ! -f "$tmux_conf" ]; then
+        echo "Creating ~/.tmux.conf..."
+        touch "$tmux_conf"
+    fi
+
+    # Check if mouse mode is already configured
+    if grep -q "set -g mouse" "$tmux_conf"; then
+        echo "✓ Mouse mode already configured in tmux"
+    else
+        echo "Adding mouse scrolling to tmux configuration..."
+        echo "" >> "$tmux_conf"
+        echo "# Enable mouse mode for scrolling and pane selection" >> "$tmux_conf"
+        echo "set -g mouse on" >> "$tmux_conf"
+        echo "✓ Added mouse scrolling to ~/.tmux.conf"
+    fi
+
+    # Check if default terminal is already configured
+    if grep -q "set -g default-terminal" "$tmux_conf"; then
+        echo "✓ Default terminal already configured in tmux"
+    else
+        echo "Setting tmux-256color as default terminal..."
+        echo "" >> "$tmux_conf"
+        echo "# Set default terminal to support 256 colors" >> "$tmux_conf"
+        echo "set -g default-terminal \"tmux-256color\"" >> "$tmux_conf"
+        echo "✓ Added tmux-256color as default terminal"
+    fi
 }
 
 # Setup ZSH if available
@@ -200,6 +235,16 @@ if [ "$HAS_BASH" = true ]; then
     fi
 fi
 
+# Setup tmux if available
+if command -v tmux &> /dev/null; then
+    echo ""
+    setup_tmux
+else
+    echo ""
+    echo "⚠️  tmux not found, skipping tmux configuration"
+    echo "   Install tmux for terminal multiplexing with mouse support"
+fi
+
 echo ""
 echo "🎉 Setup complete!"
 echo ""
@@ -221,6 +266,15 @@ if [ "$HAS_BASH" = true ]; then
     echo "BASH Configuration:"
     echo "• Restart terminal or run: source ~/.bash_profile"
     echo "• All vargr aliases available in bash"
+    echo ""
+fi
+
+if command -v tmux &> /dev/null; then
+    echo "TMUX Configuration:"
+    echo "• ✓ Mouse scrolling enabled in tmux"
+    echo "• ✓ Default terminal set to tmux-256color"
+    echo "• Use mouse wheel to scroll in tmux panes"
+    echo "• Click to select panes and resize windows"
     echo ""
 fi
 

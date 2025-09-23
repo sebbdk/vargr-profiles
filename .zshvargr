@@ -29,11 +29,15 @@ hint() {
     echo 
     echo 'ssh-copy-id user@host to setup keys on remote hosts'
     echo 'fzf use it for fuzzy finding files'
+    echo 'Use temo like so:'
+    echo 'tmux new -s hello | tmux a -t hello'
     echo
     echo 'dev - goes to dev folder'
     echo 'pro - goes to dev/projects folder'
     echo 'note - opens dev/notes in vscode'
     echo '---------------------------------'
+    echo
+    echo "You are currently in: $PWD"
     echo
 }
 
@@ -54,5 +58,3 @@ alias gbr='git branch --sort=-committerdate | head -n 10'
 alias party='curl http://parrot.live'
 
 hint
-
-dev
