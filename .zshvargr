@@ -17,6 +17,10 @@ gitCleadLS()
     fi
 }
 
+helpme() {
+    echo "'swaymsg layout splith' makes the ui normal again.."
+}
+
 hint() {
     echo
     echo "Hello $(whoami), here are your shortcuts:"
