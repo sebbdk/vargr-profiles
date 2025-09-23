@@ -5,12 +5,18 @@ run setup.sh to setup bash and zsh profiles + some plugins.
 
 the zsh profile is based on oh-my-zsh being installed already.
 
+# Recommended terminals
+This's work with any, but here's the ones i recommend.
 
-# Features to add:
- - optional script that installs my fav tools:
-    - nvm and activates latest node/npm version
-    - installs claude code
+ - Windows -> Tabby (https://tabby.sh/)
+ - OSX -> default terminal, comes with zsh
+ - Arch -> Kitty
 
 
-See how notes on how it's done on ubuntu here:
-https://itecsonline.com/post/how-to-install-claude-code-on-ubuntu-linux-complete-guide-2025
+# Install scripts
+Theres some scripts to setup tools quickly for:
+
+ - nvm
+ - zsh
+ - tmux
+ - nvm
