@@ -39,6 +39,11 @@ hint() {
     echo 'dev - goes to dev folder'
     echo 'pro - goes to dev/projects folder'
     echo 'note - opens dev/notes in vscode'
+    if [[ -f /etc/arch-release ]] && command -v brightnessctl &> /dev/null; then
+        echo 'kbdon - turn keyboard backlight on (high)'
+        echo 'kbdlow - turn keyboard backlight on (low)'
+        echo 'kbdoff - turn keyboard backlight off'
+    fi
     echo '---------------------------------'
     echo
     echo "You are currently in: $PWD"
@@ -51,6 +56,13 @@ alias pro='cd ~/dev/pro'
 
 # Misc shortcuts
 alias note='code ~/dev/logs' # opens my logs in vscode
+
+# Keyboard backlight shortcuts (Arch Linux only)
+if [[ -f /etc/arch-release ]] && command -v brightnessctl &> /dev/null; then
+    alias kbdon='brightnessctl -d tpacpi::kbd_backlight s 2'
+    alias kbdlow='brightnessctl -d tpacpi::kbd_backlight s 1'
+    alias kbdoff='brightnessctl -d tpacpi::kbd_backlight s 0'
+fi
 
 # Git related shortcuts
 alias gl='git log --oneline --all --graph --decorate  $*'

@@ -1,0 +1,15 @@
+[Unit]
+Description=Automatic Keyboard Backlight Control
+After=multi-user.target
+Wants=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/kbd_auto_brightness.sh
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
