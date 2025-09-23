@@ -4,6 +4,26 @@
 # Handles both zsh (with oh-my-zsh) and bash fallback
 # Run this once to configure everything
 
+# Check if install-all.sh exists and offer to run it first
+if [ -f "./install-all.sh" ] && [ ! -f "$HOME/.vargr-setup-complete" ]; then
+    echo "🔧 Development tools installation available!"
+    echo ""
+    echo "Would you like to install all development tools first?"
+    echo "This includes: zsh, oh-my-zsh, tmux, nvm, Node.js, and Claude Code"
+    echo ""
+    read -p "Run ./install-all.sh now? (y/N): " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        echo "Running install-all.sh..."
+        ./install-all.sh
+        echo ""
+        echo "Installation complete! Continuing with profile setup..."
+        echo ""
+        # Mark that we've run the installer
+        touch "$HOME/.vargr-setup-complete"
+    fi
+fi
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ZSHVARGR_PATH="$SCRIPT_DIR/.zshvargr"
 BASH_PROFILE_PATH="$SCRIPT_DIR/.bash_profile"
