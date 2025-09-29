@@ -11,6 +11,10 @@ if [[ ! -f /etc/arch-release ]]; then
     exit 1
 fi
 
+# Update package database
+echo "Updating package database..."
+sudo pacman -Sy
+
 # Check if yay is installed (AUR helper)
 if ! command -v yay &> /dev/null; then
     echo "Installing yay (AUR helper)..."
